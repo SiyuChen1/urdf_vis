@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="birdbot_v02">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.00953226749992518 -8.74725977887702E-05 0.032956330944008"
+        rpy="0 0 0" />
+      <mass
+        value="0.246924141249937" />
+      <inertia
+        ixx="0.000221694453566261"
+        ixy="1.29544470448474E-07"
+        ixz="0.000249933379178087"
+        iyy="0.000765868788750837"
+        iyz="7.14022846072766E-08"
+        izz="0.000628489505207198" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_vis/meshes/birdbot/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_vis/meshes/birdbot/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="left_pelvis_link">
+    <inertial>
+      <origin
+        xyz="0.0195191765439385 -0.00108555214162339 0.0420855750240419"
+        rpy="0 0 0" />
+      <mass
+        value="0.0240397099024521" />
+      <inertia
+        ixx="1.13077853390725E-05"
+        ixy="-7.31468831589664E-09"
+        ixz="-1.81875737043039E-08"
+        iyy="1.1712758026971E-05"
+        iyz="1.20218585480778E-07"
+        izz="3.67522461116956E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_vis/meshes/birdbot/left_pelvis_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_vis/meshes/birdbot/left_pelvis_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_pelvis_joint"
+    type="continuous">
+    <origin
+      xyz="0.0012159263592315 -0.000878363870458041 0.0247999999999999"
+      rpy="1.64268091463056 -1.5707963267949 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="left_pelvis_link" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="left_femur_link">
+    <inertial>
+      <origin
+        xyz="-0.0720989770041663 -0.000865147911771405 -0.0114896832158845"
+        rpy="0 0 0" />
+      <mass
+        value="0.0327221036602836" />
+      <inertia
+        ixx="3.08407026620195E-06"
+        ixy="1.07434484253441E-07"
+        ixz="-1.09478320149189E-07"
+        iyy="4.6097498063934E-05"
+        iyz="-1.75643192247383E-10"
+        izz="4.70309278366279E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_vis/meshes/birdbot/left_femur_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_vis/meshes/birdbot/left_femur_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_femur_joint"
+    type="continuous">
+    <origin
+      xyz="0.00890000000000013 0 0.0850000000000002"
+      rpy="-1.5707963267949 0.551803682745526 1.5707963267949" />
+    <parent
+      link="left_pelvis_link" />
+    <child
+      link="left_femur_link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="left_tibia_link">
+    <inertial>
+      <origin
+        xyz="0.0107263256836939 -0.000883743601459291 0.0376217899198239"
+        rpy="0 0 0" />
+      <mass
+        value="0.0179012857998286" />
+      <inertia
+        ixx="2.53318343152091E-05"
+        ixy="-1.39910232320646E-09"
+        ixz="-3.11428063486452E-09"
+        iyy="2.66791207407097E-05"
+        iyz="-8.99208225651905E-07"
+        izz="2.41373390652192E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_vis/meshes/birdbot/left_tibia_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_vis/meshes/birdbot/left_tibia_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_tibia_joint"
+    type="continuous">
+    <origin
+      xyz="-0.109999587813108 -0.000301132771852425 0"
+      rpy="1.5202434435008 1.5707963267949 0" />
+    <parent
+      link="left_femur_link" />
+    <child
+      link="left_tibia_link" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="left_foot_link">
+    <inertial>
+      <origin
+        xyz="0.0170509852161176 0.0125530964960421 0.011917138427946"
+        rpy="0 0 0" />
+      <mass
+        value="0.0101123797998784" />
+      <inertia
+        ixx="7.0777096383425E-07"
+        ixy="-6.06985357181719E-08"
+        ixz="8.57926912423418E-09"
+        iyy="1.10398350725594E-06"
+        iyz="-5.43347647719711E-09"
+        izz="8.9327110210762E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_vis/meshes/birdbot/left_foot_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_vis/meshes/birdbot/left_foot_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_foot_joint"
+    type="continuous">
+    <origin
+      xyz="0 0 0.105"
+      rpy="1.5707963267949 -0.530471978203955 1.5707963267949" />
+    <parent
+      link="left_tibia_link" />
+    <child
+      link="left_foot_link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="right_pelvis_link">
+    <inertial>
+      <origin
+        xyz="-0.0205308234392045 -0.00108555211230889 0.0420855749701808"
+        rpy="0 0 0" />
+      <mass
+        value="0.0240397097940218" />
+      <inertia
+        ixx="1.13077853153155E-05"
+        ixy="-7.31468153039882E-09"
+        ixz="-1.81875762280756E-08"
+        iyy="1.17127580008201E-05"
+        iyz="1.20218578982658E-07"
+        izz="3.67522459932003E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_vis/meshes/birdbot/right_pelvis_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_vis/meshes/birdbot/right_pelvis_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_pelvis_joint"
+    type="continuous">
+    <origin
+      xyz="0.00121592635923154 -0.000878363870458022 -0.0252000000000001"
+      rpy="1.64268091463056 -1.5707963267949 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="right_pelvis_link" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="right_femur_link">
+    <inertial>
+      <origin
+        xyz="-0.0720989776555793 -0.00086514797710395 0.0111103166977323"
+        rpy="0 0 0" />
+      <mass
+        value="0.0327221032031459" />
+      <inertia
+        ixx="3.08407024028202E-06"
+        ixy="1.0743454259446E-07"
+        ixz="-1.09478236113347E-07"
+        iyy="4.609749765575E-05"
+        iyz="-1.75630614982693E-10"
+        izz="4.70309274374976E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_vis/meshes/birdbot/right_femur_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_vis/meshes/birdbot/right_femur_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_femur_joint"
+    type="continuous">
+    <origin
+      xyz="-0.00854999999999983 0 0.0850000000000003"
+      rpy="-1.5707963267949 0.551803682745524 1.5707963267949" />
+    <parent
+      link="right_pelvis_link" />
+    <child
+      link="right_femur_link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="right_tibia_link">
+    <inertial>
+      <origin
+        xyz="-0.0118736743163061 -0.000883743601459069 0.0376217899198245"
+        rpy="0 0 0" />
+      <mass
+        value="0.0179012857998287" />
+      <inertia
+        ixx="2.53318343152092E-05"
+        ixy="-1.39910232320804E-09"
+        ixz="-3.11428063485932E-09"
+        iyy="2.66791207407098E-05"
+        iyz="-8.99208225651893E-07"
+        izz="2.41373390652192E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_vis/meshes/birdbot/right_tibia_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_vis/meshes/birdbot/right_tibia_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_tibia_joint"
+    type="continuous">
+    <origin
+      xyz="-0.109999587813108 -0.000301132771851897 0"
+      rpy="1.5202434435008 1.5707963267949 0" />
+    <parent
+      link="right_femur_link" />
+    <child
+      link="right_tibia_link" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="right_foot_link">
+    <inertial>
+      <origin
+        xyz="0.0170509852161176 0.0125530964960421 -0.010682861572054"
+        rpy="0 0 0" />
+      <mass
+        value="0.0101123797998784" />
+      <inertia
+        ixx="7.07770963834249E-07"
+        ixy="-6.06985357181726E-08"
+        ixz="8.57926912423357E-09"
+        iyy="1.10398350725593E-06"
+        iyz="-5.43347647719803E-09"
+        izz="8.93271102107618E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_vis/meshes/birdbot/right_foot_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://urdf_vis/meshes/birdbot/right_foot_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_foot_joint"
+    type="continuous">
+    <origin
+      xyz="0 0 0.105"
+      rpy="1.5707963267949 -0.530471978203955 1.5707963267949" />
+    <parent
+      link="right_tibia_link" />
+    <child
+      link="right_foot_link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+</robot>
